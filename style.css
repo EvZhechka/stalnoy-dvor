@@ -1,8 +1,8 @@
 /* ============ TOKENS ============ */
 :root {
-  --steel-950: #15171a;
-  --steel-900: #1a1d22;
-  --steel-800: #242830;
+  --steel-950: #000000; /* Чистый черный цвет */
+  --steel-900: #121417;
+  --steel-800: #22262d;
   --steel-600: #4a5560;
   --steel-300: #8b939b;
   --concrete-100: #e8e6df;
@@ -18,7 +18,7 @@
 html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-body);
-  color: var(--steel-950);
+  color: #15171a;
   background: var(--concrete-50);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -57,12 +57,12 @@ section { padding: 96px 0; }
   letter-spacing: 1px;
 }
 
-/* ============ HEADER (ТЕМНЫЙ СТАЛЬНОЙ ЦВЕТ) ============ */
+/* ============ HEADER (ЧЕРНЫЙ ЦВЕТ) ============ */
 header {
   position: sticky; top: 0; z-index: 100;
-  background: var(--steel-950);
-  border-bottom: 1px solid var(--steel-800);
-  color: var(--concrete-50);
+  background: #000000; /* Чистый черный */
+  border-bottom: 1px solid #1c1f24;
+  color: #ffffff;
 }
 .nav {
   display: flex; align-items: center; justify-content: space-between;
@@ -88,7 +88,7 @@ header {
   font-size: 15px;
 }
 .nav-links a {
-  color: #c9ced6;
+  color: #d1d5db;
   text-decoration: none !important;
   border-bottom: none !important;
   transition: color 0.2s ease;
@@ -186,12 +186,12 @@ header {
     top: 100%;
     left: 0;
     right: 0;
-    background: var(--steel-950);
+    background: #000000;
     border-bottom: 2px solid var(--spark-500);
     padding: 24px 20px 28px;
     flex-direction: column;
     gap: 18px;
-    box-shadow: 0 16px 30px rgba(0,0,0,0.4);
+    box-shadow: 0 16px 30px rgba(0,0,0,0.6);
   }
   .nav-links.open {
     display: flex;
@@ -251,8 +251,8 @@ header {
 .btn-ghost {
   font-family: var(--font-head);
   background: transparent;
-  color: var(--steel-950);
-  border: 1.5px solid var(--steel-950);
+  color: #15171a;
+  border: 1.5px solid #15171a;
   padding: 14px 26px;
   font-size: 15px;
   text-decoration: none !important;
@@ -311,11 +311,11 @@ header {
   }
 }
 
-/* ============ SERVICES ============ */
+/* ============ SERVICES (4 КАРТОЧКИ) ============ */
 .services-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 28px;
   margin-top: 44px;
 }
 .service-card {
@@ -325,6 +325,11 @@ header {
   border-radius: 4px;
   display: flex;
   flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.service-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
 }
 .service-img {
   width: 100%;
@@ -367,7 +372,7 @@ header {
 }
 
 /* ============ PROCESS ============ */
-.process { background: var(--steel-950); color: var(--concrete-50); }
+.process { background: #000000; color: var(--concrete-50); border-top: 1px solid #1c1f24; border-bottom: 1px solid #1c1f24; }
 .process .eyebrow { color: var(--spark-500); }
 .process-steps {
   display: grid;
@@ -375,7 +380,7 @@ header {
   gap: 32px;
   margin-top: 48px;
 }
-.process-step { border-top: 2px solid var(--steel-600); padding-top: 18px; }
+.process-step { border-top: 2px solid #333a42; padding-top: 18px; }
 .process-step .num {
   font-family: var(--font-head);
   font-size: 15px;
@@ -427,7 +432,7 @@ header {
   .advantages .wrap { grid-template-columns: 1fr; gap: 32px; }
 }
 
-/* ============ CONTACT / FORM ============ */
+/* ============ CONTACT / FORM С ВАЛИДАЦИЕЙ ============ */
 .contact { background: var(--concrete-100); border-top: 1px solid var(--line); }
 .contact .wrap {
   display: grid;
@@ -452,7 +457,7 @@ header {
 
 form { background: var(--concrete-50); border: 1px solid var(--line); padding: 36px; border-radius: 4px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.field { margin-bottom: 18px; }
+.field { margin-bottom: 14px; position: relative; }
 .field label {
   display: block;
   font-size: 13px;
@@ -460,17 +465,20 @@ form { background: var(--concrete-50); border: 1px solid var(--line); padding: 3
   margin-bottom: 6px;
   font-weight: 500;
 }
+.req { color: var(--spark-600); font-weight: bold; }
+
 .field input,
 .field select,
 .field textarea {
   width: 100%;
   font-family: var(--font-body);
-  font-size: 16px; /* 16px предотвращает нежелательный зум на iOS */
+  font-size: 16px; /* 16px предотвращает авто-зум на смартфонах */
   padding: 12px 14px;
   border: 1px solid var(--line);
   background: #ffffff;
-  color: var(--steel-950);
+  color: #15171a;
   border-radius: 2px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .field input:focus,
 .field select:focus,
@@ -478,9 +486,29 @@ form { background: var(--concrete-50); border: 1px solid var(--line); padding: 3
   outline: 2px solid var(--spark-500);
   outline-offset: 1px;
 }
+
+/* Стили для валидации полей */
+.field-error {
+  display: block;
+  font-size: 12px;
+  color: #d9381e;
+  margin-top: 4px;
+  min-height: 16px;
+  line-height: 1.3;
+}
+.field.has-error input,
+.field.has-error textarea {
+  border-color: #d9381e !important;
+  background-color: #fffaf9 !important;
+  outline-color: #d9381e !important;
+}
+.field.is-valid input {
+  border-color: #2b6a34;
+}
+
 .field textarea { resize: vertical; min-height: 90px; }
-.radio-group { display: flex; gap: 20px; flex-wrap: wrap; }
-.radio-option { display: flex; align-items: center; gap: 8px; font-size: 14.5px; cursor: pointer; }
+.radio-group { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 4px; }
+.radio-option { display: flex; align-items: center; gap: 7px; font-size: 14px; cursor: pointer; }
 .radio-option input { width: auto; accent-color: var(--spark-500); cursor: pointer; }
 
 .submit-btn {
@@ -495,6 +523,7 @@ form { background: var(--concrete-50); border: 1px solid var(--line); padding: 3
   cursor: pointer;
   transition: background 0.2s ease;
   border-radius: 2px;
+  margin-top: 6px;
 }
 .submit-btn:hover { background: var(--spark-600); }
 .submit-btn:disabled { background: var(--steel-300); cursor: not-allowed; }
@@ -512,16 +541,16 @@ form { background: var(--concrete-50); border: 1px solid var(--line); padding: 3
 
 @media(max-width: 840px) {
   .contact .wrap { grid-template-columns: 1fr; gap: 40px; }
-  .form-row { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; gap: 8px; }
   form { padding: 24px 18px; }
 }
 
-/* ============ FOOTER (В ЦВЕТ ОСТАЛЬНОЙ СТРАНИЦЫ) ============ */
+/* ============ FOOTER (ЧЕРНЫЙ ЦВЕТ) ============ */
 footer {
-  background: var(--concrete-50);
-  color: var(--steel-600);
-  border-top: 1px solid var(--line);
-  padding: 36px 0;
+  background: #000000; /* Чистый черный */
+  color: #9da3af;
+  border-top: 1px solid #1c1f24;
+  padding: 38px 0;
   font-size: 14px;
 }
 footer .wrap {
@@ -530,11 +559,11 @@ footer .wrap {
 footer a {
   text-decoration: none !important;
   border-bottom: none !important;
-  color: var(--steel-950);
+  color: #f4f3ee;
   transition: color 0.2s ease;
 }
 footer a:hover {
-  color: var(--spark-600);
+  color: var(--spark-500);
 }
 footer .footer-links {
   display: flex;
