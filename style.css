@@ -1,7 +1,8 @@
 /* ============ TOKENS ============ */
 :root {
   --steel-950: #15171a;
-  --steel-800: #1f2226;
+  --steel-900: #1a1d22;
+  --steel-800: #242830;
   --steel-600: #4a5560;
   --steel-300: #8b939b;
   --concrete-100: #e8e6df;
@@ -23,7 +24,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 img { max-width: 100%; display: block; }
-a { color: inherit; }
+
+/* Убираем все подчёркивания ссылок на сайте */
+a, a:hover, a:focus, a:visited {
+  color: inherit;
+  text-decoration: none !important;
+}
+
 h1, h2, h3 {
   font-family: var(--font-head);
   font-weight: 600;
@@ -50,13 +57,12 @@ section { padding: 96px 0; }
   letter-spacing: 1px;
 }
 
-/* ============ HEADER & NAVIGATION ============ */
+/* ============ HEADER (ТЕМНЫЙ СТАЛЬНОЙ ЦВЕТ) ============ */
 header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(244, 243, 238, 0.95);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--line);
+  background: var(--steel-950);
+  border-bottom: 1px solid var(--steel-800);
+  color: var(--concrete-50);
 }
 .nav {
   display: flex; align-items: center; justify-content: space-between;
@@ -69,60 +75,71 @@ header {
   font-size: 21px;
   font-weight: 600;
   display: flex; align-items: center; gap: 10px;
-  text-decoration: none;
+  color: #ffffff;
+  text-decoration: none !important;
 }
 .logo-mark {
   width: 26px; height: 26px;
   flex-shrink: 0;
+  color: #ffffff;
 }
 .nav-links {
   display: flex; gap: 32px;
   font-size: 15px;
 }
 .nav-links a {
-  text-decoration: none;
+  color: #c9ced6;
+  text-decoration: none !important;
+  border-bottom: none !important;
   transition: color 0.2s ease;
 }
-.nav-links a:hover { color: var(--spark-600); }
-.mobile-phone-link { display: none; }
+.nav-links a:hover {
+  color: var(--spark-500);
+}
 
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
 }
 
 .nav-phone {
   font-family: var(--font-head);
   font-size: 16px;
   font-weight: 500;
-  text-decoration: none;
-  color: var(--steel-950);
+  color: #ffffff;
+  text-decoration: none !important;
+  border-bottom: none !important;
   transition: color 0.2s ease;
   white-space: nowrap;
 }
-.nav-phone:hover { color: var(--spark-600); }
+.nav-phone:hover {
+  color: var(--spark-500);
+}
 
 .nav-cta {
   font-family: var(--font-head);
-  background: var(--steel-950);
-  color: var(--concrete-50);
+  background: var(--spark-500);
+  color: #ffffff;
   border: none;
   padding: 10px 20px;
   font-size: 14px;
   letter-spacing: 0.3px;
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: none !important;
   transition: background 0.2s ease;
   white-space: nowrap;
+  border-radius: 2px;
 }
-.nav-cta:hover { background: var(--spark-600); }
+.nav-cta:hover {
+  background: var(--spark-600);
+}
 
-/* Burger button */
+/* Кнопка мобильного меню (Burger) */
 .burger {
   display: none;
-  width: 32px;
-  height: 24px;
+  width: 30px;
+  height: 22px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -135,19 +152,17 @@ header {
   position: absolute;
   height: 2.5px;
   width: 100%;
-  background: var(--steel-950);
+  background: #ffffff;
   border-radius: 2px;
-  opacity: 1;
   left: 0;
-  transform: rotate(0deg);
   transition: .25s ease-in-out;
 }
-.burger span:nth-child(1) { top: 2px; }
-.burger span:nth-child(2) { top: 11px; }
-.burger span:nth-child(3) { top: 20px; }
+.burger span:nth-child(1) { top: 1px; }
+.burger span:nth-child(2) { top: 9.5px; }
+.burger span:nth-child(3) { top: 18px; }
 
 .burger.active span:nth-child(1) {
-  top: 11px;
+  top: 9.5px;
   transform: rotate(135deg);
 }
 .burger.active span:nth-child(2) {
@@ -155,7 +170,7 @@ header {
   left: -20px;
 }
 .burger.active span:nth-child(3) {
-  top: 11px;
+  top: 9.5px;
   transform: rotate(-135deg);
 }
 
@@ -171,14 +186,12 @@ header {
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(244, 243, 238, 0.98);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: var(--steel-950);
     border-bottom: 2px solid var(--spark-500);
     padding: 24px 20px 28px;
     flex-direction: column;
-    gap: 16px;
-    box-shadow: 0 16px 30px rgba(0,0,0,0.12);
+    gap: 18px;
+    box-shadow: 0 16px 30px rgba(0,0,0,0.4);
   }
   .nav-links.open {
     display: flex;
@@ -186,15 +199,13 @@ header {
   .nav-links a {
     font-family: var(--font-head);
     font-size: 19px;
+    color: #ffffff;
     padding: 6px 0;
-    border-bottom: 1px solid rgba(216, 213, 203, 0.5);
+    text-decoration: none !important;
+    border-bottom: none !important;
   }
-  .nav-links .mobile-phone-link {
-    display: block;
-    color: var(--spark-600);
-    font-size: 18px;
-    padding-top: 10px;
-    border-bottom: none;
+  .nav-links a:hover {
+    color: var(--spark-500);
   }
 }
 
@@ -225,15 +236,16 @@ header {
 .btn-primary {
   font-family: var(--font-head);
   background: var(--spark-500);
-  color: var(--concrete-50);
+  color: #ffffff;
   border: none;
   padding: 15px 28px;
   font-size: 15px;
   letter-spacing: 0.3px;
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: none !important;
   display: inline-block;
   transition: background 0.2s ease;
+  border-radius: 2px;
 }
 .btn-primary:hover { background: var(--spark-600); }
 .btn-ghost {
@@ -243,9 +255,10 @@ header {
   border: 1.5px solid var(--steel-950);
   padding: 14px 26px;
   font-size: 15px;
-  text-decoration: none;
+  text-decoration: none !important;
   display: inline-block;
   transition: all 0.2s ease;
+  border-radius: 2px;
 }
 .btn-ghost:hover { border-color: var(--spark-600); color: var(--spark-600); }
 
@@ -306,7 +319,7 @@ header {
   margin-top: 44px;
 }
 .service-card {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid var(--line);
   padding: 30px;
   border-radius: 4px;
@@ -336,14 +349,16 @@ header {
   font-family: var(--font-head);
   font-size: 15px;
   color: var(--spark-600);
-  text-decoration: none;
-  border-bottom: 1.5px solid var(--spark-600);
-  padding-bottom: 2px;
+  text-decoration: none !important;
+  border-bottom: none !important;
   display: inline-block;
   align-self: flex-start;
-  transition: color 0.2s, border-color 0.2s;
+  transition: color 0.2s, transform 0.2s;
 }
-.service-link:hover { color: var(--steel-950); border-color: var(--steel-950); }
+.service-link:hover {
+  color: var(--spark-500);
+  transform: translateX(3px);
+}
 
 @media(max-width: 760px) {
   .services-grid { grid-template-columns: 1fr; }
@@ -426,7 +441,8 @@ header {
 .contact-detail b { font-family: var(--font-head); font-size: 20px; font-weight: 500; }
 
 .phone-link {
-  text-decoration: none;
+  text-decoration: none !important;
+  border-bottom: none !important;
   color: inherit;
   transition: color 0.2s ease;
 }
@@ -449,10 +465,10 @@ form { background: var(--concrete-50); border: 1px solid var(--line); padding: 3
 .field textarea {
   width: 100%;
   font-family: var(--font-body);
-  font-size: 16px; /* 16px prevents iOS Safari auto-zoom */
+  font-size: 16px; /* 16px предотвращает нежелательный зум на iOS */
   padding: 12px 14px;
   border: 1px solid var(--line);
-  background: #fff;
+  background: #ffffff;
   color: var(--steel-950);
   border-radius: 2px;
 }
@@ -471,7 +487,7 @@ form { background: var(--concrete-50); border: 1px solid var(--line); padding: 3
   width: 100%;
   font-family: var(--font-head);
   background: var(--spark-500);
-  color: #fff;
+  color: #ffffff;
   border: none;
   padding: 16px;
   font-size: 16px;
@@ -500,24 +516,30 @@ form { background: var(--concrete-50); border: 1px solid var(--line); padding: 3
   form { padding: 24px 18px; }
 }
 
-/* ============ FOOTER ============ */
+/* ============ FOOTER (В ЦВЕТ ОСТАЛЬНОЙ СТРАНИЦЫ) ============ */
 footer {
-  background: var(--steel-950);
-  color: var(--steel-300);
+  background: var(--concrete-50);
+  color: var(--steel-600);
+  border-top: 1px solid var(--line);
   padding: 36px 0;
   font-size: 14px;
 }
 footer .wrap {
   display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
 }
-footer a { text-decoration: none; color: var(--concrete-50); }
+footer a {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  color: var(--steel-950);
+  transition: color 0.2s ease;
+}
+footer a:hover {
+  color: var(--spark-600);
+}
 footer .footer-links {
   display: flex;
   gap: 24px;
   align-items: center;
-}
-footer .footer-links a:hover {
-  color: var(--spark-500);
 }
 
 @media(max-width: 600px) {
