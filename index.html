@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Стальной Двор — ворота и навесы на заказ</title>
+  <title>Стальной Двор — ворота и навесы на заказ в Могилёве</title>
+  <meta name="description" content="Изготовление и монтаж ворот, заборов и навесов на заказ в Могилёве и Могилёвской области. Собственный цех, фиксированная смета, гарантия 5 лет на сварку.">
+  <meta property="og:title" content="Стальной Двор — ворота и навесы на заказ в Могилёве">
+  <meta property="og:description" content="Изготовление и монтаж ворот, заборов и навесов в Могилёве. Свой цех, гарантия 5 лет на сварку.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,20 +18,29 @@
 
 <header>
   <div class="nav">
-    <div class="logo">
+    <a href="#" class="logo">
       <svg class="logo-mark" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="2" y="2" width="22" height="22" stroke="#15171a" stroke-width="2"/>
         <path d="M2 9H24M9 2V24M17 2V24" stroke="#15171a" stroke-width="1.4"/>
       </svg>
       Стальной Двор
-    </div>
-    <nav class="nav-links">
+    </a>
+    <nav class="nav-links" id="navLinks">
       <a href="#services">Услуги</a>
       <a href="#process">Как мы работаем</a>
-      <a href="#gallery">Работы</a>
+      <a href="#advantages">Преимущества</a>
       <a href="#contact">Контакты</a>
+      <a href="tel:+375447607071" class="mobile-phone-link">+375 44 760-70-71</a>
     </nav>
-    <a href="#contact" class="nav-cta">Оставить заявку</a>
+    <div class="nav-actions">
+      <a href="tel:+375447607071" class="nav-phone">+375 44 760-70-71</a>
+      <a href="#contact" class="nav-cta">Оставить заявку</a>
+      <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -34,7 +48,7 @@
   <div class="wrap">
     <div>
       <h1>Ворота и навесы, которые стоят десятилетиями</h1>
-      <p class="lead">Проектируем, варим и монтируем металлоконструкции по вашим размерам — от откатных ворот до навесов на весь двор. Работаем с металлом, а не с картинками в каталоге.</p>
+      <p class="lead">Проектируем, варим и монтируем металлоконструкции по Могилёву и области — от откатных ворот до навесов на весь двор. Работаем с металлом, а не с картинками в каталоге.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">Рассчитать стоимость</a>
         <a href="#services" class="btn-ghost">Смотреть услуги</a>
@@ -46,7 +60,7 @@
       </div>
     </div>
     <div class="hero-figure">
-      <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80" alt="Сварочные работы и металлоконструкции">
+      <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80" alt="Сварочные работы и металлоконструкции в цехе">
     </div>
   </div>
 </section>
@@ -57,7 +71,7 @@
     <h2 style="font-size:34px; max-width:20ch;">Две вещи, которые мы делаем лучше всего</h2>
     <div class="services-grid">
       <div class="service-card">
-        <img src="" alt="Ворота и заборы" class="service-img">
+        <img src="https://images.unsplash.com/photo-1788009145769-e278b44782ee?auto=format&fit=crop&w=800&q=80" alt="Откатные и распашные ворота, заборы" class="service-img" loading="lazy">
         <h3>Ворота и заборы</h3>
         <p>Откатные, распашные и секционные ворота из профильной трубы и профлиста, с автоматикой или без.</p>
         <ul>
@@ -69,7 +83,7 @@
         <a href="#contact" class="service-link">Узнать стоимость ворот →</a>
       </div>
       <div class="service-card">
-        <img src="" alt="Навесы" class="service-img">
+        <img src="https://images.unsplash.com/photo-1626512274926-4c0bc9827840?auto=format&fit=crop&w=800&q=80" alt="Навесы для авто и террасы" class="service-img" loading="lazy">
         <h3>Навесы</h3>
         <p>Навесы для автомобиля, беседок и хозяйственных зон на металлокаркасе — от простого до поликарбонатного кровельного пирога.</p>
         <ul>
@@ -113,12 +127,12 @@
   </div>
 </section>
 
-<section class="advantages">
+<section id="advantages" class="advantages">
   <div class="wrap">
     <div>
       <div class="eyebrow">Почему мы</div>
       <h2>Работаем как цех, а не как посредник</h2>
-      <p>У нас свой цех, сварщики в штате и монтажная бригада. Не передаём заказ субподрядчикам — от чертежа до последнего шва делаем сами.</p>
+      <p>У нас свой цех в Могилёве, сварщики в штате и монтажная бригада. Не передаём заказ субподрядчикам — от чертежа до последнего шва делаем сами.</p>
     </div>
     <div class="adv-list">
       <div class="adv-item">
@@ -149,11 +163,11 @@
       <p>Заполните форму или свяжитесь напрямую. Заявка сразу приходит нам в Telegram, так что мы увидим её почти сразу.</p>
       <div class="contact-detail">
         <span>Телефон</span>
-        <b>+375 44 760-70-71</b>
+        <b><a href="tel:+375447607071" class="phone-link">+375 44 760-70-71</a></b>
       </div>
       <div class="contact-detail">
-        <span>Цех</span>
-        <b>г. Какой-то адрес</b>
+        <span>Цех и производство</span>
+        <b>г. Могилёв</b>
       </div>
     </div>
 
@@ -165,7 +179,7 @@
         </div>
         <div class="field">
           <label for="phone">Телефон</label>
-          <input type="tel" id="phone" name="phone" required placeholder="+375 ...">
+          <input type="tel" id="phone" name="phone" required placeholder="+375 44 123-45-67">
         </div>
       </div>
 
@@ -192,8 +206,11 @@
 
 <footer>
   <div class="wrap">
-    <div>© 2026 Стальной Двор. Все права защищены.</div>
-    <a href="#contact">Оставить заявку</a>
+    <div>© 2026 Стальной Двор. г. Могилёв. Все права защищены.</div>
+    <div class="footer-links">
+      <a href="tel:+375447607071" class="phone-link">+375 44 760-70-71</a>
+      <a href="#contact">Оставить заявку</a>
+    </div>
   </div>
 </footer>
 
