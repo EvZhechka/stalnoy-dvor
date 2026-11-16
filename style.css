@@ -434,6 +434,40 @@ header {
   .process-steps { grid-template-columns: 1fr; }
 }
 
+/* Пояснение к процессу работ по договору подряда (Закон РБ № 225-З) */
+.process-guarantee-note {
+  margin-top: 36px;
+  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid #23272f;
+  border-left: 4px solid var(--spark-500);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14.5px;
+  color: #cfd3dc;
+  line-height: 1.55;
+}
+.process-guarantee-note .note-icon {
+  flex-shrink: 0;
+  color: var(--spark-500);
+  width: 24px;
+  height: 24px;
+}
+.process-guarantee-note strong {
+  color: #ffffff;
+}
+@media(max-width: 640px) {
+  .process-guarantee-note {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 16px;
+    font-size: 13.5px;
+  }
+}
+
 /* ============ CONTACT / FORM С ВАЛИДАЦИЕЙ ============ */
 .contact { background: var(--concrete-100); border-top: 1px solid var(--line); }
 .contact .wrap {
@@ -519,6 +553,43 @@ form { background: var(--concrete-50); border: 1px solid var(--line); padding: 3
 .radio-option { display: flex; align-items: center; gap: 7px; font-size: 14px; cursor: pointer; }
 .radio-option input { width: auto; accent-color: var(--spark-500); cursor: pointer; }
 
+/* Чекбокс согласия на обработку персональных данных (Закон РБ № 99-З) */
+.field-checkbox {
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13.5px;
+  color: var(--steel-800);
+  cursor: pointer;
+  line-height: 1.45;
+}
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: var(--spark-500);
+  cursor: pointer;
+}
+.checkbox-label a {
+  color: var(--spark-600);
+  text-decoration: underline !important;
+}
+.checkbox-label a:hover {
+  color: var(--spark-500);
+}
+.field-checkbox.has-error .checkbox-label {
+  color: #d9381e;
+}
+.field-checkbox.has-error input[type="checkbox"] {
+  outline: 2px solid #d9381e;
+  outline-offset: 1px;
+}
+
 .submit-btn {
   width: 100%;
   font-family: var(--font-head);
@@ -531,12 +602,12 @@ form { background: var(--concrete-50); border: 1px solid var(--line); padding: 3
   cursor: pointer;
   transition: background 0.2s ease;
   border-radius: 2px;
-  margin-top: 6px;
+  margin-top: 10px;
 }
 .submit-btn:hover { background: var(--spark-600); }
 .submit-btn:disabled { background: var(--steel-300); cursor: not-allowed; }
 
-.form-note { font-size: 12.5px; color: var(--steel-600); margin-top: 12px; }
+.form-note { font-size: 12.5px; color: var(--steel-600); margin-top: 10px; line-height: 1.4; }
 .form-status {
   margin-top: 14px;
   font-size: 14px;
@@ -558,11 +629,38 @@ footer {
   background: #000000 !important; /* Чистый черный */
   color: #9da3af;
   border-top: 1px solid #1c1f24;
-  padding: 38px 0;
-  font-size: 14px;
+  padding: 38px 0 28px;
+  font-size: 13.5px;
 }
-footer .wrap {
-  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.footer-info {
+  max-width: 740px;
+  line-height: 1.6;
+}
+.footer-legal {
+  color: #c9cdd4;
+  margin-bottom: 8px;
+}
+.footer-policy a {
+  color: var(--spark-500);
+  text-decoration: underline !important;
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+.footer-policy a:hover {
+  color: #ffffff;
+}
+.footer-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-shrink: 0;
 }
 footer a {
   text-decoration: none !important;
@@ -573,15 +671,26 @@ footer a {
 footer a:hover {
   color: var(--spark-500);
 }
-footer .footer-links {
-  display: flex;
-  gap: 24px;
-  align-items: center;
+.footer-bottom {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #1c1f24;
+}
+.footer-disclaimer {
+  font-size: 12px;
+  color: #6c727d;
+  line-height: 1.5;
 }
 
-@media(max-width: 600px) {
-  footer .wrap {
+@media(max-width: 760px) {
+  .footer-content {
     flex-direction: column;
     align-items: flex-start;
+    gap: 16px;
+  }
+  .footer-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 }

@@ -159,11 +159,34 @@ if (nameInput) {
 }
 
 // ==========================================
-// 3. Отправка формы с проверкой данных
+// 3. Отправка формы с проверкой данных и согласия (Закон РБ № 99-З)
 // ==========================================
 const form = document.getElementById('requestForm');
 const submitBtn = document.getElementById('submitBtn');
 const statusBox = document.getElementById('formStatus');
+const consentCheckbox = document.getElementById('policyConsent');
+const consentField = document.getElementById('consentField');
+const consentError = document.getElementById('consentError');
+
+function validateConsent(showError = true) {
+  if (!consentCheckbox) return true;
+  if (!consentCheckbox.checked) {
+    if (showError) {
+      if (consentField) consentField.classList.add('has-error');
+      if (consentError) consentError.textContent = 'Необходимо подтвердить согласие на обработку персональных данных';
+    }
+    return false;
+  }
+  if (consentField) consentField.classList.remove('has-error');
+  if (consentError) consentError.textContent = '';
+  return true;
+}
+
+if (consentCheckbox) {
+  consentCheckbox.addEventListener('change', function() {
+    validateConsent(true);
+  });
+}
 
 function showStatus(kind, text){
   statusBox.className = 'form-status ' + kind;
@@ -177,13 +200,16 @@ if (form) {
     // Проверяем все поля перед отправкой
     const isNameValid = validateName(true);
     const isPhoneValid = validatePhone(true);
+    const isConsentValid = validateConsent(true);
 
-    if (!isNameValid || !isPhoneValid) {
+    if (!isNameValid || !isPhoneValid || !isConsentValid) {
       showStatus('err', 'Пожалуйста, проверьте и исправьте подсвеченные поля.');
       if (!isNameValid) {
         nameInput.focus();
-      } else {
+      } else if (!isPhoneValid) {
         phoneInput.focus();
+      } else if (consentCheckbox) {
+        consentCheckbox.focus();
       }
       return;
     }
@@ -211,6 +237,8 @@ if (form) {
         form.reset();
         clearFieldError(nameField, nameError);
         clearFieldError(phoneField, phoneError);
+        if (consentField) consentField.classList.remove('has-error');
+        if (consentError) consentError.textContent = '';
       } else {
         showStatus('err', 'Не удалось отправить заявку. Попробуйте позвонить нам напрямую по номеру +375 29 874-41-33.');
       }

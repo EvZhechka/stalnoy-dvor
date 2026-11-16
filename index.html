@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=13">
+  <link rel="stylesheet" href="style.css?v=14">
 </head>
 <body style="margin:0;padding:0;"><header>
   <div class="nav">
@@ -69,7 +69,7 @@
 <section id="services">
   <div class="wrap">
     <div class="eyebrow">Услуги цеха</div>
-    <h2 style="font-size:34px; max-width:26ch;">Металлоконструкции, которые мы делаем лучше всего</h2>
+    <h2 style="font-size:34px; max-width:26ch;">Металлоконструкции, на которых мы специализируемся</h2>
     <div class="services-grid">
       <!-- 1. Ворота и заборы -->
       <div class="service-card">
@@ -202,6 +202,15 @@
         <p>Устанавливаем на объекте и сдаём с гарантией на сварные швы.</p>
       </div>
     </div>
+    <div class="process-guarantee-note">
+      <svg class="note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <polyline points="9 12 11 14 15 10"/>
+      </svg>
+      <div>
+        <strong>Официальный договор и прозрачные расчёты:</strong> работы выполняются по официальному договору подряда после выезда на замер и согласования сметы, оплата производится в белорусских рублях (наличный и безналичный расчёт).
+      </div>
+    </div>
   </div>
 </section>
 
@@ -223,6 +232,12 @@
         <span>Исполнитель</span>
         <b>ИП Авсянкин Николай Владимирович</b>
         <span class="contact-sub">УНП 791104637</span>
+      </div>
+      <div class="contact-detail">
+        <span>Режим работы</span>
+        <!-- Режим работы (при необходимости часы можно скорректировать) -->
+        <b>Пн–Пт 9:00–19:00, Сб 10:00–16:00</b>
+        <span class="contact-sub">Вс — выходной (приём онлайн-заявок круглосуточно)</span>
       </div>
     </div>
 
@@ -258,23 +273,40 @@
         <textarea id="message" name="message" placeholder="Размеры, адрес объекта в Могилёве или районе, пожелания по материалам"></textarea>
       </div>
 
+      <div class="field field-checkbox" id="consentField">
+        <label class="checkbox-label" for="policyConsent">
+          <input type="checkbox" id="policyConsent" name="consent" required>
+          <span>Я согласен на обработку персональных данных в соответствии с <a href="policy.html" target="_blank">Политикой обработки персональных данных</a> <span class="req">*</span></span>
+        </label>
+        <span class="field-error" id="consentError"></span>
+      </div>
+
       <button type="submit" class="submit-btn" id="submitBtn">Отправить заявку</button>
-      <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
       <div class="form-status" id="formStatus"></div>
     </form>
   </div>
 </section>
 
 <footer>
-  <div class="wrap">
-    <div>© 2026 Стальной Двор · ИП Авсянкин Н. В. · УНП 791104637 · г. Могилёв</div>
+  <div class="wrap footer-content">
+    <div class="footer-info">
+      <div class="footer-legal">© 2026 Стальной Двор · ИП Авсянкин Николай Владимирович · УНП 791104637 · Свидетельство о гос. регистрации № [номер] от [дата], выдано [кем выдано, напр. Администрацией Ленинского р-на г. Могилёва] · г. Могилёв</div>
+      <div class="footer-policy">
+        <a href="policy.html" class="footer-policy-link">Политика обработки персональных данных</a>
+      </div>
+    </div>
     <div class="footer-links">
       <a href="tel:+375298744133" class="phone-link">+375 29 874-41-33</a>
-      <a href="#contact">Оставить заявку</a>
+      <a href="#contact" class="footer-cta-link">Оставить заявку</a>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <div class="footer-disclaimer">
+      Информация на сайте носит справочно-информационный характер и не является публичной офертой. Итоговая стоимость работ определяется после замера и согласования сметы.
     </div>
   </div>
 </footer>
 
-<script src="script.js?v=5"></script>
+<script src="script.js?v=7"></script>
 </body>
 </html>
