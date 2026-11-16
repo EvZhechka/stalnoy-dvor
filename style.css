@@ -554,22 +554,11 @@ form { background: var(--concrete-50); border: 1px solid var(--line); padding: 3
 
 /* ============ FOOTER (ЧЕРНЫЙ ЦВЕТ) ============ */
 footer {
-  position: relative;
   background: #000000 !important; /* Чистый черный */
   color: #9da3af;
   border-top: 1px solid #1c1f24;
   padding: 38px 0;
   font-size: 14px;
-}
-footer::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  height: 200vh;
-  background: #000000;
-  pointer-events: none;
 }
 footer .wrap {
   display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
