@@ -212,10 +212,10 @@ if (form) {
         clearFieldError(nameField, nameError);
         clearFieldError(phoneField, phoneError);
       } else {
-        showStatus('err', 'Не удалось отправить заявку. Попробуйте позвонить нам напрямую по номеру +375 44 760-70-71.');
+        showStatus('err', 'Не удалось отправить заявку. Попробуйте позвонить нам напрямую по номеру +375 29 874-41-33.');
       }
     } catch(err){
-      showStatus('err', 'Ошибка соединения с сервером. Пожалуйста, позвоните нам напрямую: +375 44 760-70-71.');
+      showStatus('err', 'Ошибка соединения с сервером. Пожалуйста, позвоните нам напрямую: +375 29 874-41-33.');
     } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = "Отправить заявку";

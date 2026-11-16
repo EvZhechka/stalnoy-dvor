@@ -4,33 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Стальной Двор — ворота, навесы, перголы и металлоконструкции в Могилёве</title>
-  <meta name="description" content="Изготовление и монтаж металлоконструкций на заказ в Могилёве: ворота, заборы, теневые навесы, перголы, козырьки, лестницы и мангальные зоны. Гарантия 5 лет.">
+  <meta name="description" content="Изготовление и монтаж металлоконструкций на заказ в Могилёве и области: откатные ворота, навесы для авто, теневые перголы, козырьки, лестницы и зоны барбекю. Собственный цех, гарантия 5 лет.">
   <meta property="og:title" content="Стальной Двор — металлоконструкции на заказ в Могилёве">
-  <meta property="og:description" content="Ворота, теневые навесы, перголы, козырьки, лестницы и зоны барбекю в Могилёве. Собственный цех, гарантия 5 лет.">
+  <meta property="og:description" content="Ворота, теневые навесы, перголы, козырьки, лестницы и беседки в Могилёве. Собственный цех, гарантия 5 лет.">
   <meta property="og:image" content="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=7">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=8">
 </head>
-<body style="margin:0;padding:0;"><header>
+<body>
+
+<header>
   <div class="nav">
     <a href="#" class="logo">
-      <svg class="logo-mark" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="2" y="2" width="22" height="22" stroke="currentColor" stroke-width="2"/>
-        <path d="M2 9H24M9 2V24M17 2V24" stroke="currentColor" stroke-width="1.4"/>
+      <svg class="logo-mark" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="28" height="28" rx="7" fill="url(#logo-grad)"/>
+        <path d="M7 9.5L14 5.5L21 9.5V18.5L14 22.5L7 18.5V9.5Z" stroke="#ffffff" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M14 5.5V22.5M7 9.5L21 18.5M21 9.5L7 18.5" stroke="#ffffff" stroke-width="1.1" stroke-opacity="0.6"/>
+        <defs>
+          <linearGradient id="logo-grad" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#2563eb"/>
+            <stop offset="1" stop-color="#0ea5e9"/>
+          </linearGradient>
+        </defs>
       </svg>
-      Стальной Двор
+      <div class="logo-text">
+        <span class="logo-name">Стальной Двор</span>
+        <span class="logo-sub">цех металлоконструкций · Могилёв</span>
+      </div>
     </a>
     <nav class="nav-links" id="navLinks">
-      <a href="#services">Услуги</a>
-      <a href="#process">Как мы работаем</a>
+      <a href="#services">Каталог услуг</a>
+      <a href="#process">Этапы работы</a>
       <a href="#contact">Контакты</a>
     </nav>
     <div class="nav-actions">
-      <a href="tel:+375447607071" class="nav-phone">+375 44 760-70-71</a>
-      <a href="#contact" class="nav-cta">Оставить заявку</a>
+      <a href="tel:+375298744133" class="nav-phone">
+        <svg class="phone-icon" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+        </svg>
+        +375 29 874-41-33
+      </a>
+      <a href="#contact" class="nav-cta">Рассчитать стоимость</a>
       <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
         <span></span>
         <span></span>
@@ -43,16 +60,29 @@
 <section class="hero">
   <div class="wrap">
     <div class="hero-content">
-      <h1>Ворота и навесы, которые стоят десятилетиями</h1>
-      <p class="lead">Проектируем, варим и монтируем металлоконструкции по Могилёву и области — от откатных ворот и теневых пергол до козырьков, лестниц и мангальных зон. Работаем с металлом, а не с картинками в каталоге.</p>
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Собственный цех в Могилёве · Гарантия 5 лет по договору
+      </div>
+      <h1>Ворота, навесы и конструкции <span class="gradient-text">на десятилетия</span></h1>
+      <p class="lead">Проектируем, варим и монтируем надежные металлоизделия под ключ по Могилёву и области. От откатных ворот и теневых пергол до козырьков и межэтажных лестниц. Свое оборудование, честные сметы и опытные сварщики.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Рассчитать стоимость</a>
-        <a href="#services" class="btn-ghost">Смотреть услуги</a>
+        <a href="#contact" class="btn-primary">Заказать расчет сметы →</a>
+        <a href="#services" class="btn-ghost">Смотреть каталог изделий</a>
       </div>
       <div class="hero-stats">
-        <div><b>420+</b><span>объектов сдано</span></div>
-        <div><b>11 лет</b><span>на рынке</span></div>
-        <div><b>5 лет</b><span>гарантии на сварку</span></div>
+        <div class="stat-card">
+          <b>420+</b>
+          <span>сданных объектов в регионе</span>
+        </div>
+        <div class="stat-card">
+          <b>11 лет</b>
+          <span>опыта работы с металлом</span>
+        </div>
+        <div class="stat-card">
+          <b>5 лет</b>
+          <span>официальной гарантии на швы</span>
+        </div>
       </div>
     </div>
   </div>
@@ -60,91 +90,124 @@
 
 <section id="services">
   <div class="wrap">
-    <div class="eyebrow">Услуги цеха</div>
-    <h2 style="font-size:34px; max-width:26ch;">Металлоконструкции, которые мы делаем лучше всего</h2>
+    <div class="section-head">
+      <div class="eyebrow">Каталог производства</div>
+      <h2>Металлоконструкции на заказ по вашим размерам</h2>
+      <p class="section-sub">Производим из толстостенной профильной трубы с антикоррозийной обработкой и качественной полимерной покраской.</p>
+    </div>
     <div class="services-grid">
       <!-- 1. Ворота и заборы -->
       <div class="service-card">
-        <img src="images/gates.jpg?v=2" alt="Откатные и распашные металлические ворота, заборы" class="service-img" loading="lazy">
-        <h3>Ворота и заборы</h3>
-        <p>Откатные, распашные и секционные ворота из профильной трубы и профлиста, с автоматикой или без.</p>
-        <ul>
-          <li><span>Откатные ворота</span><span>от 4 м</span></li>
-          <li><span>Распашные ворота</span><span>от 3 м</span></li>
-          <li><span>Калитки и секции забора</span><span>по размеру</span></li>
-          <li><span>Автоматика и приводы</span><span>по запросу</span></li>
-        </ul>
-        <a href="#contact" class="service-link">Узнать стоимость ворот →</a>
+        <div class="card-badge">Популярно</div>
+        <div class="service-img-box">
+          <img src="images/gates.jpg?v=3" alt="Откатные и распашные металлические ворота, заборы" class="service-img" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Ворота и заборы</h3>
+          <p>Откатные, распашные и секционные ворота из профильной трубы и профлиста, с автоматикой или ручным открыванием.</p>
+          <ul class="specs-list">
+            <li><span>Откатные ворота</span><b>от 4 м</b></li>
+            <li><span>Распашные ворота</span><b>от 3 м</b></li>
+            <li><span>Калитки и секции</span><b>по размеру</b></li>
+            <li><span>Автоматика приводов</span><b>Nice, Came, Alutech</b></li>
+          </ul>
+          <a href="#contact" class="service-link">Рассчитать стоимость ворот <span>→</span></a>
+        </div>
       </div>
 
       <!-- 2. Навесы для авто -->
       <div class="service-card">
-        <img src="images/carport.jpg?v=2" alt="Навесы для авто и двора из металла" class="service-img" loading="lazy">
-        <h3>Навесы для авто и двора</h3>
-        <p>Навесы для автомобилей, дворовых территорий и хозяйственных зон на металлокаркасе — надежная защита от осадков.</p>
-        <ul>
-          <li><span>Навес для 1–2 авто</span><span>от 3×6 м</span></li>
-          <li><span>Навес над парковкой</span><span>по проекту</span></li>
-          <li><span>Хозяйственный навес</span><span>по проекту</span></li>
-          <li><span>Кровля: поликарбонат / металл</span><span>на выбор</span></li>
-        </ul>
-        <a href="#contact" class="service-link">Узнать стоимость навеса →</a>
+        <div class="card-badge">Надежность</div>
+        <div class="service-img-box">
+          <img src="images/carport.jpg?v=3" alt="Навесы для авто и двора из металла" class="service-img" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Навесы для авто и двора</h3>
+          <p>Арочные и односкатные навесы для авто, дворовых территорий и стоянок на мощном сварном металлокаркасе.</p>
+          <ul class="specs-list">
+            <li><span>Навес для 1–2 авто</span><b>от 3×6 м</b></li>
+            <li><span>Навес над парковкой</span><b>по проекту</b></li>
+            <li><span>Хозяйственный навес</span><b>любая форма</b></li>
+            <li><span>Кровля на выбор</span><b>поликарбонат / профлист</b></li>
+          </ul>
+          <a href="#contact" class="service-link">Рассчитать стоимость навеса <span>→</span></a>
+        </div>
       </div>
 
       <!-- 3. Теневые навесы и перголы -->
       <div class="service-card">
-        <img src="images/pergola.jpg?v=2" alt="Металлические теневые навесы и перголы для террасы" class="service-img" loading="lazy">
-        <h3>Теневые навесы и перголы</h3>
-        <p>Стильные теневые навесы для террас, патио и загородного отдыха: перголы с ламелями, теневые паруса и тенты на металлокаркасе.</p>
-        <ul>
-          <li><span>Теневой навес для террасы</span><span>от 3×3 м</span></li>
-          <li><span>Перголы с ламелями</span><span>под ключ</span></li>
-          <li><span>Теневые паруса и маркизы</span><span>по проекту</span></li>
-          <li><span>Защита от солнца и УФ</span><span>до 95%</span></li>
-        </ul>
-        <a href="#contact" class="service-link">Узнать стоимость теневого навеса →</a>
+        <div class="card-badge">Стиль</div>
+        <div class="service-img-box">
+          <img src="images/pergola.jpg?v=3" alt="Металлические теневые навесы и перголы для террасы" class="service-img" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Теневые навесы и перголы</h3>
+          <p>Стильные навесы для террас и патио: перголы с ламелями, теневые паруса и солнцезащитные маркизы на металлокаркасе.</p>
+          <ul class="specs-list">
+            <li><span>Теневой навес для террасы</span><b>от 3×3 м</b></li>
+            <li><span>Перголы с ламелями</span><b>под ключ</b></li>
+            <li><span>Теневые паруса</span><b>по проекту</b></li>
+            <li><span>Защита от солнца и УФ</span><b>до 95%</b></li>
+          </ul>
+          <a href="#contact" class="service-link">Рассчитать стоимость перголы <span>→</span></a>
+        </div>
       </div>
 
       <!-- 4. Козырьки и тамбуры -->
       <div class="service-card">
-        <img src="images/canopy.jpg?v=2" alt="Металлические козырьки над крыльцом и входные группы" class="service-img" loading="lazy">
-        <h3>Козырьки и входные группы</h3>
-        <p>Защитные козырьки над крыльцом, входные тамбуры и навесы над дверью из прочного металла с поликарбонатом или стеклом.</p>
-        <ul>
-          <li><span>Козырек над крыльцом</span><span>от 1.2×0.9 м</span></li>
-          <li><span>Входные тамбуры</span><span>по проекту</span></li>
-          <li><span>Элементы лофт и ковки</span><span>на выбор</span></li>
-          <li><span>Антикоррозийная защита</span><span>включена</span></li>
-        </ul>
-        <a href="#contact" class="service-link">Узнать стоимость козырька →</a>
+        <div class="card-badge">Защита входа</div>
+        <div class="service-img-box">
+          <img src="images/canopy.jpg?v=3" alt="Металлические козырьки над крыльцом и входные группы" class="service-img" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Козырьки и входные группы</h3>
+          <p>Защитные козырьки над крыльцом, входные тамбуры и навесы над дверью из прочного металла с поликарбонатом или стеклом.</p>
+          <ul class="specs-list">
+            <li><span>Козырек над крыльцом</span><b>от 1.2×0.9 м</b></li>
+            <li><span>Входные тамбуры</span><b>по проекту</b></li>
+            <li><span>Элементы лофт и ковки</span><b>на выбор</b></li>
+            <li><span>Антикоррозийная защита</span><b>включена</b></li>
+          </ul>
+          <a href="#contact" class="service-link">Рассчитать стоимость козырька <span>→</span></a>
+        </div>
       </div>
 
       <!-- 5. Лестницы и перила -->
       <div class="service-card">
-        <img src="images/stairs.jpg?v=2" alt="Металлические лестницы и перила на заказ" class="service-img" loading="lazy">
-        <h3>Лестницы и перила</h3>
-        <p>Металлокаркасы межэтажных лестниц, уличные входные крыльца со ступенями, надежные ограждения и перила любой сложности.</p>
-        <ul>
-          <li><span>Каркас лестницы</span><span>монокосоур / ломаный</span></li>
-          <li><span>Уличное крыльцо</span><span>под ключ</span></li>
-          <li><span>Перила и ограждения</span><span>от 1 п.м.</span></li>
-          <li><span>Расчёт прочности</span><span>по СНиП</span></li>
-        </ul>
-        <a href="#contact" class="service-link">Узнать стоимость лестницы →</a>
+        <div class="card-badge">Прочность</div>
+        <div class="service-img-box">
+          <img src="images/stairs.jpg?v=3" alt="Металлические лестницы и перила на заказ" class="service-img" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Лестницы и перила</h3>
+          <p>Металлокаркасы межэтажных лестниц, уличные входные крыльца со ступенями, надежные ограждения и перила любой сложности.</p>
+          <ul class="specs-list">
+            <li><span>Каркас лестницы</span><b>монокосоур / ломаный</b></li>
+            <li><span>Уличное крыльцо</span><b>под ключ</b></li>
+            <li><span>Перила и ограждения</span><b>от 1 п.м.</b></li>
+            <li><span>Расчёт нагрузок</span><b>по СНиП</b></li>
+          </ul>
+          <a href="#contact" class="service-link">Рассчитать стоимость лестницы <span>→</span></a>
+        </div>
       </div>
 
       <!-- 6. Мангальные зоны и беседки -->
       <div class="service-card">
-        <img src="images/bbq.jpg?v=2" alt="Мангальные зоны, комплексы барбекю и беседки из металла" class="service-img" loading="lazy">
-        <h3>Мангальные зоны и беседки</h3>
-        <p>Зоны барбекю с навесом, цельносварные мангальные комплексы и уютные металлические беседки в стиле лофт для дачи и дома.</p>
-        <ul>
-          <li><span>Мангальная зона с крышей</span><span>от 2×1 м</span></li>
-          <li><span>Беседка на металлокаркасе</span><span>по проекту</span></li>
-          <li><span>Жаропрочная сталь</span><span>от 4 до 6 мм</span></li>
-          <li><span>Термостойкая покраска</span><span>до 1000°C</span></li>
-        </ul>
-        <a href="#contact" class="service-link">Узнать стоимость мангальной зоны →</a>
+        <div class="card-badge">Для отдыха</div>
+        <div class="service-img-box">
+          <img src="images/bbq.jpg?v=3" alt="Мангальные зоны, комплексы барбекю и беседки из металла" class="service-img" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Мангальные зоны и беседки</h3>
+          <p>Зоны барбекю с навесом, цельносварные мангальные комплексы и уютные металлические беседки в стиле лофт для дачи и дома.</p>
+          <ul class="specs-list">
+            <li><span>Мангальная зона с крышей</span><b>от 2×1 м</b></li>
+            <li><span>Беседка на металлокаркасе</span><b>по проекту</b></li>
+            <li><span>Жаропрочная сталь</span><b>от 4 до 6 мм</b></li>
+            <li><span>Термостойкая покраска</span><b>до 1000°C</b></li>
+          </ul>
+          <a href="#contact" class="service-link">Рассчитать стоимость беседки <span>→</span></a>
+        </div>
       </div>
     </div>
   </div>
@@ -152,28 +215,31 @@
 
 <section id="process" class="process">
   <div class="wrap">
-    <div class="eyebrow">Как мы работаем</div>
-    <h2 style="font-size:32px;">От заявки до монтажа — четыре шага</h2>
-    <div class="process-steps">
-      <div class="process-step">
-        <span class="num">01</span>
-        <h4>Заявка</h4>
-        <p>Вы оставляете заявку на сайте или звоните — уточняем задачу и место объекта.</p>
+    <div class="section-head text-center">
+      <div class="eyebrow eyebrow-light">Простой и прозрачный процесс</div>
+      <h2>От заявки до установки на объекте</h2>
+      <p class="section-sub text-muted">Фиксируем стоимость до начала работ — смета не меняется в процессе монтажа.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-card">
+        <div class="step-num">01</div>
+        <h4>Заявка и консультация</h4>
+        <p>Вы оставляете заявку на сайте или звоните нам. Уточняем размеры, пожелания по конструкции и адрес объекта в Могилёве или районе.</p>
       </div>
-      <div class="process-step">
-        <span class="num">02</span>
-        <h4>Замер и расчёт</h4>
-        <p>Выезжаем на объект, снимаем размеры, присылаем смету и сроки.</p>
+      <div class="process-card">
+        <div class="step-num">02</div>
+        <h4>Выезд на замер и точная смета</h4>
+        <p>Мастер выезжает на объект, снимает точные размеры, согласовывает материалы и фиксирует окончательную стоимость в договоре.</p>
       </div>
-      <div class="process-step">
-        <span class="num">03</span>
-        <h4>Изготовление</h4>
-        <p>Варим конструкцию в цехе, готовим к покраске и монтажу.</p>
+      <div class="process-card">
+        <div class="step-num">03</div>
+        <h4>Сварка и покраска в цехе</h4>
+        <p>Изготавливаем конструкцию на профессиональном оборудовании: резка, сварка швов, зачистка, грунтовка и защитная покраска.</p>
       </div>
-      <div class="process-step">
-        <span class="num">04</span>
-        <h4>Монтаж</h4>
-        <p>Устанавливаем на объекте и сдаём с гарантией на сварные швы.</p>
+      <div class="process-card">
+        <div class="step-num">04</div>
+        <h4>Доставка и монтаж</h4>
+        <p>Привозим изделие своей бригадой, аккуратно монтируем на объекте и передаем вам с гарантией 5 лет на все сварные соединения.</p>
       </div>
     </div>
   </div>
@@ -181,74 +247,126 @@
 
 <section id="contact" class="contact">
   <div class="wrap">
-    <div class="contact-info">
-      <div class="eyebrow">Заявка</div>
-      <h2>Расскажите, что нужно — перезвоним в течение дня</h2>
-      <p>Заполните форму или свяжитесь напрямую. Заявка сразу приходит нам в Telegram, так что мы увидим её почти сразу.</p>
-      <div class="contact-detail">
-        <span>Телефон</span>
-        <b><a href="tel:+375447607071" class="phone-link">+375 44 760-70-71</a></b>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="eyebrow eyebrow-light">Контакты цеха</div>
+        <h2>Рассчитаем стоимость за 30 минут</h2>
+        <p class="contact-desc">Позвоните нам или оставьте заявку — мастер сразу оценит объем работ и сориентирует по срокам и материалам.</p>
+        
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="label">Прямой телефон мастера</span>
+            <a href="tel:+375298744133" class="val val-phone">+375 29 874-41-33</a>
+            <span class="subtext">Ежедневно с 8:00 до 20:00</span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <span class="label">Производство и монтаж</span>
+            <span class="val">г. Могилёв и Могилёвская область</span>
+            <span class="subtext">Выезд на замер по согласованию</span>
+          </div>
+        </div>
+
+        <div class="contact-item legal-item">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="16" rx="2"/>
+              <line x1="7" y1="8" x2="17" y2="8"/>
+              <line x1="7" y1="12" x2="17" y2="12"/>
+              <line x1="7" y1="16" x2="12" y2="16"/>
+            </svg>
+          </div>
+          <div>
+            <span class="label">Официальные реквизиты</span>
+            <span class="val val-legal">ИП Авсянкин Николай Владимирович</span>
+            <span class="subtext">УНП: 791104637 · Договор и гарантия</span>
+          </div>
+        </div>
       </div>
-      <div class="contact-detail">
-        <span>Цех и производство</span>
-        <b>г. Могилёв</b>
-      </div>
-      <div class="contact-detail">
-        <span>Исполнитель</span>
-        <b>ИП Авсянкин Николай Владимирович</b>
-        <span class="contact-sub">УНП 791104637</span>
+
+      <div class="form-wrapper">
+        <form id="requestForm" novalidate>
+          <div class="form-header">
+            <h3>Оставить заявку на расчет</h3>
+            <p>Заявка моментально поступает мастеру — перезвоним в течение дня</p>
+          </div>
+
+          <div class="form-row">
+            <div class="field" id="nameField">
+              <label for="name">Ваше имя <span class="req">*</span></label>
+              <input type="text" id="name" name="name" required placeholder="Например, Александр" autocomplete="name">
+              <span class="field-error" id="nameError"></span>
+            </div>
+            <div class="field" id="phoneField">
+              <label for="phone">Номер телефона <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" required placeholder="+375 (29) 123-45-67" autocomplete="tel">
+              <span class="field-error" id="phoneError"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Что вас интересует</label>
+            <div class="radio-group">
+              <label class="radio-option"><input type="radio" name="service" value="Ворота / забор" checked> <span>Ворота / забор</span></label>
+              <label class="radio-option"><input type="radio" name="service" value="Навес для авто"> <span>Навес для авто</span></label>
+              <label class="radio-option"><input type="radio" name="service" value="Теневой навес / пергола"> <span>Теневой навес</span></label>
+              <label class="radio-option"><input type="radio" name="service" value="Козырек"> <span>Козырек</span></label>
+              <label class="radio-option"><input type="radio" name="service" value="Лестница"> <span>Лестница / перила</span></label>
+              <label class="radio-option"><input type="radio" name="service" value="Мангальная зона"> <span>Мангальная зона</span></label>
+              <label class="radio-option"><input type="radio" name="service" value="Другое"> <span>Другое изделие</span></label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">Параметры заказа или пожелания</label>
+            <textarea id="message" name="message" placeholder="Ориентировочные размеры, адрес в Могилёве/районе, пожелания по материалам..."></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submitBtn">
+            <span>Отправить заявку мастеру</span>
+            <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+          <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+          <div class="form-status" id="formStatus"></div>
+        </form>
       </div>
     </div>
-
-    <form id="requestForm" novalidate>
-      <div class="form-row">
-        <div class="field" id="nameField">
-          <label for="name">Ваше имя <span class="req">*</span></label>
-          <input type="text" id="name" name="name" required placeholder="Например, Александр" autocomplete="name">
-          <span class="field-error" id="nameError"></span>
-        </div>
-        <div class="field" id="phoneField">
-          <label for="phone">Номер телефона <span class="req">*</span></label>
-          <input type="tel" id="phone" name="phone" required placeholder="+375 (44) 123-45-67" autocomplete="tel">
-          <span class="field-error" id="phoneError"></span>
-        </div>
-      </div>
-
-      <div class="field">
-        <label>Что вас интересует</label>
-        <div class="radio-group">
-          <label class="radio-option"><input type="radio" name="service" value="Ворота / забор" checked> Ворота / забор</label>
-          <label class="radio-option"><input type="radio" name="service" value="Навес для авто"> Навес для авто</label>
-          <label class="radio-option"><input type="radio" name="service" value="Теневой навес / пергола"> Теневой навес / пергола</label>
-          <label class="radio-option"><input type="radio" name="service" value="Козырек"> Козырек / тамбур</label>
-          <label class="radio-option"><input type="radio" name="service" value="Лестница"> Лестница / перила</label>
-          <label class="radio-option"><input type="radio" name="service" value="Мангальная зона"> Мангальная зона</label>
-          <label class="radio-option"><input type="radio" name="service" value="Другое"> Другое</label>
-        </div>
-      </div>
-
-      <div class="field">
-        <label for="message">Комментарий к заказу</label>
-        <textarea id="message" name="message" placeholder="Размеры, адрес объекта в Могилёве или районе, пожелания по материалам"></textarea>
-      </div>
-
-      <button type="submit" class="submit-btn" id="submitBtn">Отправить заявку</button>
-      <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
-      <div class="form-status" id="formStatus"></div>
-    </form>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div>© 2026 Стальной Двор · ИП Авсянкин Н. В. · УНП 791104637 · г. Могилёв</div>
+    <div class="footer-left">
+      <div class="footer-brand">Стальной Двор</div>
+      <div class="footer-legal">ИП Авсянкин Н. В. · УНП 791104637 · г. Могилёв · © 2026 Все права защищены</div>
+    </div>
     <div class="footer-links">
-      <a href="tel:+375447607071" class="phone-link">+375 44 760-70-71</a>
-      <a href="#contact">Оставить заявку</a>
+      <a href="tel:+375298744133" class="phone-link">
+        <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+        </svg>
+        +375 29 874-41-33
+      </a>
+      <a href="#contact" class="footer-cta-link">Оставить заявку</a>
     </div>
   </div>
 </footer>
 
-<script src="script.js?v=5"></script>
+<script src="script.js?v=6"></script>
 </body>
 </html>
